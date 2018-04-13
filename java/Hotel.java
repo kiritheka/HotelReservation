@@ -1,15 +1,42 @@
-package try1;
+package try5;
 
-import java.util.Calendar;
-import java.util.Date;
+public class Hotel {
 
-import try1.HotelImpl.Customer;
+	String hotelName;
+	int starRating;
+	int regularWeekDayPrice;
+	int rewardWeekDayPrice;
+	int regularWeekEndPrice;
+	int rewardWeekEndPrice;
 
-public interface Hotel {
+	public Hotel(String hotelName, int starRating, int regularWeekDayPrice, int rewardWeekDayPrice,
+			int regularWeekEndPrice, int rewardWeekEndPrice) {
+		this.hotelName = hotelName;
+		this.starRating = starRating;
+		this.regularWeekDayPrice = regularWeekDayPrice;
+		this.rewardWeekDayPrice = rewardWeekDayPrice;
+		this.regularWeekEndPrice = regularWeekEndPrice;
+		this.rewardWeekEndPrice = rewardWeekEndPrice;
+	}
 
-	public int getHotelRating(String hotelName) ;
-	public int getWeekDayPrice(String hotelName, Customer customerType);
-	public int getWeekEndPrice(String hotelName, Customer customerType) ;
-	public int getTotalCost(String hotelName, Customer customerType, Date date);
+	public int getStarRating() {
+		return starRating;
+	}
+
+	public int getRegularWeekEndPrice() {
+		return regularWeekEndPrice;
+	}
+
+	public int getRegularWeekDayPrice() {
+		return regularWeekDayPrice;
+	}
+
+	public int getRewardWeekEndPrice() {
+		return rewardWeekEndPrice;
+	}
+
+	public int getRewardWeekDayPrice() {
+		return rewardWeekDayPrice;
+	}
 
 }
